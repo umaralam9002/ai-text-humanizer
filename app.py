@@ -727,24 +727,9 @@ with gr.Blocks(theme="soft", title="AI Text Humanizer & Detector") as demo:
         outputs=[combined_humanized, combined_analysis]
     )
 
-def get_available_port(start_port=7860, max_attempts=10):
-    for port in range(start_port, start_port + max_attempts):
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-            sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            try:
-                sock.bind(("0.0.0.0", port))
-                return port
-            except OSError:
-                continue
-    return 7860
+# Mount Gradio UI on the root path
+app = gr.mount_gradio_app(api_app, demo, path="/")
 
 
 if __name__ == "__main__":
-    preferred_port = int(os.getenv("GRADIO_SERVER_PORT", "7860"))
-    server_port = get_available_port(preferred_port)
-    api_app = gr.mount_gradio_app(api_app, demo, path="/ui")
-    print(f"Starting API on http://127.0.0.1:{server_port}")
-    print(f"Gradio UI available at http://127.0.0.1:{server_port}/ui")
-    print(f"API docs available at http://127.0.0.1:{server_port}/docs")
-    import uvicorn
-    uvicorn.run(api_app, host="0.0.0.0", port=server_port)
+    demo.launch()
