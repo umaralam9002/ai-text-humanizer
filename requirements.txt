@@ -1,6 +1,6 @@
-gradio==4.44.1
+gradio
 transformers==4.57.6
-pytorch==2.13.0
+torch
 nltk==3.10.0
 textstat==0.7.13
 numpy==2.5.1
