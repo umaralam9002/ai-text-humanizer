@@ -731,5 +731,7 @@ with gr.Blocks(theme="soft", title="AI Text Humanizer & Detector") as demo:
 app = gr.mount_gradio_app(api_app, demo, path="/")
 
 
-if __name__ == "__main__":
-    demo.launch(ssr_mode=False)
+# if __name__ == "__main__":
+#     port = int(os.getenv("PORT", os.getenv("GRADIO_SERVER_PORT", "7860")))
+#     import uvicorn
+#     uvicorn.run(app, host="0.0.0.0", port=port)
