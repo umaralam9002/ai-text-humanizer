@@ -732,4 +732,4 @@ app = gr.mount_gradio_app(api_app, demo, path="/")
 
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(ssr_mode=False)
