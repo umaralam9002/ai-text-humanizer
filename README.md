@@ -1,3 +1,14 @@
+---
+title: AI Text Humanizer
+emoji: 🤖
+colorFrom: blue
+colorTo: green
+sdk: gradio
+python_version: "3.11"
+app_file: app.py
+pinned: false
+---
+
 # 🤖➡️👨 AI Text Humanizer
 
 An advanced tool to transform robotic, AI-generated text into natural, human-like writing.
