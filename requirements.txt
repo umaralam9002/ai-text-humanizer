@@ -3,8 +3,8 @@ transformers==4.57.6
 torch
 nltk==3.10.0
 textstat==0.7.13
-numpy==2.5.1
-pandas==2.3.3
+numpy==2.2.6
+pandas==2.2.3
 fastapi==0.140.7
 pydantic==2.13.4
 uvicorn==0.51.0
