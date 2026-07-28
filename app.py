@@ -746,5 +746,5 @@ if __name__ == "__main__":
     print(f"Starting API on http://127.0.0.1:{server_port}")
     print(f"Gradio UI available at http://127.0.0.1:{server_port}/ui")
     print(f"API docs available at http://127.0.0.1:{server_port}/docs")
-    import uvicorn
-    uvicorn.run(api_app, host="0.0.0.0", port=server_port)
+    # import uvicorn
+    # uvicorn.run(api_app, host="0.0.0.0", port=server_port)
