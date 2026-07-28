@@ -36,7 +36,7 @@ Built by M Umar Alam
 
 ```powershell
 git clone <your-repo-url>
-cd Humaniser-Sid-main
+cd ai-text-humanizer
 python -m pip install -r requirements.txt
 python app.py
 ```
